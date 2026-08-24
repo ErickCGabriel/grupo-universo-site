@@ -38,17 +38,14 @@ python3 -m http.server 8000
 
 ## Publicar no GitHub Pages
 
-Esta pasta já vem com o git inicializado e o primeiro commit pronto (`git log` mostra "Site institucional Grupo Universo"). Falta só:
+Esta pasta já vem com o git inicializado, o commit feito e o remoto `origin` apontando para `https://github.com/ErickCGabriel/grupo-universo-site.git`. Falta só:
 
-1. Crie um repositório **vazio** em [github.com/new](https://github.com/new): nome `grupo-universo-site`, **Public**, sem marcar "Add a README".
-2. Dentro desta pasta, no terminal:
+1. Dentro desta pasta, no terminal:
    ```bash
-   git remote add origin https://github.com/ErickCGabriel/grupo-universo-site.git
    git push -u origin main
    ```
-   *(pode trocar `grupo-universo-site` pelo nome de repositório que preferir — nesse caso, ajuste a URL acima também)*
-3. No GitHub: **Settings → Pages → Source** → selecione a branch `main` e a pasta `/ (root)`.
-4. O site fica disponível em `https://ErickCGabriel.github.io/grupo-universo-site/` até o domínio próprio ser validado.
+2. No GitHub: **Settings → Pages → Source** → selecione a branch `main` e a pasta `/ (root)`.
+3. O site fica disponível em `https://ErickCGabriel.github.io/grupo-universo-site/` até o domínio próprio ser validado.
 
 ### Conectar o domínio grupouniversoamericana.com
 
