@@ -63,4 +63,22 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resize);
     requestAnimationFrame(draw);
   }
+
+  // reveal ao rolar a página — conteúdo já vem visível por padrão
+  // (ver css/style.css); só ativamos a animação quando dá pra
+  // garantir que cada elemento será revelado.
+  const revealEls = document.querySelectorAll('.reveal');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (revealEls.length && !reduceMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  }
 });

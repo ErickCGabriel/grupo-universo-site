@@ -21,11 +21,22 @@ sitemap.xml     → mapa das 4 páginas para os buscadores
 
 Este site foi montado a partir do que encontramos publicamente (Instagram @grupouniversoamericana e diretório Solutudo). Alguns pontos **precisam ser confirmados** com o Grupo Universo antes de publicar:
 
-- **Endereço** (Estrada da Servidão Bom Recreio, 530 — Galpão 05, Bom Recreio, Americana/SP) veio de um diretório público de 2019 — confirmar se ainda é o endereço correto.
-- **"Há mais de uma década"** — usei uma frase genérica porque não encontrei a data exata de fundação. Se o cliente souber o ano certo, dá pra trocar por um número real (ex: "desde 2011").
+- **Endereço** (Estrada da Servidão Bom Recreio, 530 — Galpão 05, Bom Recreio, Americana/SP) veio de um diretório público de 2019 — confirmar se ainda é o endereço correto. O mesmo endereço agora também alimenta o JSON-LD (dados estruturados) de todas as páginas — atualizar em ambos os lugares se mudar.
+- **"Há mais de uma década"** — usei uma frase genérica porque não encontrei a data exata de fundação. O hero da home agora também mostra "10+" como número de destaque — se o cliente souber o ano certo de fundação, dá pra trocar por um número real (ex: "desde 2011") em `index.html` e `sobre.html`.
 - **Itens de exemplo em cada categoria** (produtos.html) são ilustrativos, baseados no nome da categoria — não é a lista real de produtos. Vale substituir pelos itens que o Grupo Universo realmente vende.
-- **Horário de atendimento** (contato.html) está genérico ("segunda a sexta, horário comercial") — trocar pelo horário real.
+- **Horário de atendimento** (contato.html) está genérico ("segunda a sexta, horário comercial") — trocar pelo horário real. Por isso o JSON-LD **não** inclui horário de funcionamento (`openingHours`) ainda — evita informar hora errada para o Google. Assim que o cliente confirmar, dá pra adicionar.
+- **Respostas do FAQ** (seção "Dúvidas frequentes" na home, `index.html#faq`) foram escritas de forma genérica e seguras (ex: "a forma de pagamento é combinada no WhatsApp") para não inventar política que a empresa não tem. Vale revisar com o cliente e deixar mais específico se houver regra fixa (ex: pedido mínimo em R$, formas de pagamento aceitas, cidades atendidas).
 - O link da loja Nuvemshop que aparecia na bio do Instagram (ainda com senha) **não foi incluído**, conforme combinado.
+
+## O que mudou nesta rodada (UX/UI e conversão)
+
+- **Identidade visual mais própria**: o motivo do globo pontilhado do logo agora aparece nos ícones (anel pontilhado), não só no fundo do hero — visual menos "template genérico".
+- **Prova de confiança**: destaque "10+ anos" no hero, selo âmbar "Resposta rápida no WhatsApp — sem robô, sem formulário".
+- **Seção de FAQ** (`index.html#faq`) para tirar dúvidas comuns antes do clique no WhatsApp — reduz atrito de quem ainda não tem certeza.
+- **Barra fixa de WhatsApp no rodapé do celular** (além do botão flutuante no desktop) — CTA sempre visível na tela, prática comprovada de conversão mobile.
+- **Seção Instagram** linkando o perfil real do cliente.
+- **Micro-interações**: hover nos botões e cards, animação leve ao rolar a página (sempre com fallback: todo o conteúdo aparece normalmente mesmo se o JavaScript falhar ou for bloqueado).
+- **Dados estruturados (JSON-LD)** em todas as páginas, ajudando o Google a entender que é um comércio local (nome, telefone, endereço, Instagram).
 
 ## Rodar localmente
 
