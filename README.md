@@ -77,4 +77,4 @@ O logo oficial já está em `assets/logo.png` (versão completa, fundo transpare
 
 ## WhatsApp
 
-Todos os botões de WhatsApp apontam para `(19) 3500-7016` com mensagens pré-preenchidas diferentes por contexto (pedido geral, categoria específica, etc). Para trocar o número, busque por `551935007016` em todos os arquivos `.html`.
+Todos os botões de WhatsApp apontam para `(19) 98259-4689` com mensagens pré-preenchidas diferentes por contexto (pedido geral, categoria específica, etc). Para trocar o número, busque por `5519982594689` em todos os arquivos `.html`.
